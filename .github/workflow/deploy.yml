@@ -2,7 +2,7 @@ name: Vue project Build and Deploy
 on:
     push:
         branches:
-            - master # 当master分支有变更，则执行以下jobs操作
+            - main # 当master分支有变更，则执行以下jobs操作
 jobs:
     deploying_vue_project:
         runs-on: ubuntu-latest
@@ -22,5 +22,5 @@ jobs:
                   branch: master
                   folder: dist
                   token: ${{ secrets.ACCESS_TOKEN }}
-                  repository-name: AutumnWhj/AutumnWhj.github.io # github page 仓库
+                  repository-name: ashuachao/ashuachao.github.io # github page 仓库
                   target-folder: github-actions-docs
